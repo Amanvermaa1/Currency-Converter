@@ -19,7 +19,7 @@ export default function App() {
     setLoading(true);
     fetch(`${API_BASE}/usd.json`)
       .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch currency list");
+        if (!res.ok) throw new Error("Failed to fetch currencies list");
         return res.json();
       })
       .then((data) => {
